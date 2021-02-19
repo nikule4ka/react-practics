@@ -1,14 +1,24 @@
 import React from "react";
-
+import Panel from "./components/Panel";
+import Logo from "./components/Logo";
 import paintings from "./painting.json";
 import PaintingList from "./components/PaintingList";
 
 const App = () => {
   return (
     <div>
-      <h1>Главный компонент-контейнер приложения</h1>
+      <Panel title="Свежие новости">
+        <p>text</p>
+      </Panel>
+      <Logo text="Главный компонент-контейнер приложения" />
 
-      <PaintingList items={paintings} />
+      <Panel>
+        <p>text</p>
+
+        <a href="">Читать дальше...</a>
+      </Panel>
+
+      <PaintingList paintings={paintings} />
     </div>
   );
 };
